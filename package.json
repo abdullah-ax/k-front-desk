@@ -1,0 +1,76 @@
+{
+  "name": "front-desk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Voice agent and operating platform for Gulf Breeze Air. Milestone 1: grounded answers.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "preflight": "tsx scripts/preflight.ts",
+    "overnight": "tsx scripts/overnight.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:check-rls": "tsx scripts/check-rls.ts",
+    "pipeline:load": "tsx src/pipeline/load/jsonl.ts",
+    "pipeline:derive": "tsx src/pipeline/derive/run.ts",
+    "pipeline:extract": "tsx src/pipeline/extract/_runner.ts",
+    "test:counts": "tsx tests/counts.test.ts",
+    "test:assert": "tsx src/pipeline/assert/run.ts",
+    "test:derived": "vitest run tests/derived.test.ts",
+    "test:address": "vitest run tests/address.test.ts",
+    "test:resolve": "vitest run tests/resolve.test.ts",
+    "test:scrub": "vitest run tests/scrub.test.ts",
+    "test:models": "vitest run tests/models.test.ts",
+    "test:extract-integrity": "tsx tests/extract-integrity.test.ts",
+    "test:dossier": "vitest run tests/dossier.test.ts",
+    "test:tools": "vitest run tests/tools.test.ts",
+    "test:boundaries": "tsx tests/redteam/boundaries.test.ts",
+    "test:phone": "tsx tests/phone.test.ts",
+    "test:replay": "tsx tests/replay/run.ts",
+    "test:cruel": "tsx tests/cruel/run.ts",
+    "test:redteam": "tsx tests/redteam/run.ts",
+    "provision:vapi": "tsx scripts/provision-vapi.ts",
+    "agent:serve": "tsx src/server/dev.ts",
+    "typecheck": "tsc --noEmit",
+    "pipeline:scrub": "tsx src/pipeline/scrub/backfill.ts",
+    "deploy:prod": "npx --yes vercel deploy --prod --yes",
+    "test:redaction": "vitest run tests/redaction.test.ts",
+    "test:write": "vitest run tests/write-path.test.ts",
+    "build:app": "tsx scripts/build-app-html.ts",
+    "test:observability": "vitest run tests/observability.test.ts",
+    "test:continuity": "vitest run tests/continuity.test.ts",
+    "ring": "tsx scripts/ring-me.ts",
+    "demo": "tsx scripts/demo.ts",
+    "call-sheet": "tsx scripts/call-sheet.ts",
+    "bench": "tsx scripts/bench-models.ts",
+    "demo:check": "tsx scripts/preflight-demo.ts",
+    "clean:tests": "tsx scripts/clean-test-jobs.ts",
+    "test:notes": "vitest run tests/address-in-notes.test.ts",
+    "test:claimed": "vitest run tests/claimed-write.test.ts",
+    "clean:demo": "tsx scripts/clean-demo.ts",
+    "demo:reset": "tsx scripts/reset-demo.ts",
+    "verify:source": "tsx scripts/verify-source.ts"
+  },
+  "dependencies": {
+    "@openrouter/ai-sdk-provider": "^0.4.5",
+    "ai": "^4.3.16",
+    "drizzle-orm": "^0.38.4",
+    "hono": "^4.6.14",
+    "postgres": "^3.4.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "drizzle-kit": "^0.30.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

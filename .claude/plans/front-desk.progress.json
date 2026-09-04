@@ -1,0 +1,70 @@
+{
+  "startedAt": "2026-09-03T02:40:57.103Z",
+  "updatedAt": "2026-09-03T03:06:18.821Z",
+  "tasks": {
+    "1": {
+      "state": "done",
+      "durationMs": 13115
+    },
+    "2": {
+      "state": "done",
+      "durationMs": 9017
+    },
+    "3": {
+      "state": "done",
+      "durationMs": 21500
+    },
+    "4": {
+      "state": "done",
+      "durationMs": 11596
+    },
+    "5": {
+      "state": "done",
+      "durationMs": 41861
+    },
+    "6": {
+      "state": "done",
+      "durationMs": 930
+    },
+    "7": {
+      "state": "done",
+      "durationMs": 250125
+    },
+    "8": {
+      "state": "done",
+      "durationMs": 17911
+    },
+    "9": {
+      "state": "done",
+      "durationMs": 17715
+    },
+    "10": {
+      "state": "done",
+      "durationMs": 63631
+    },
+    "11": {
+      "state": "done",
+      "durationMs": 25834
+    },
+    "12": {
+      "state": "done",
+      "durationMs": 176850
+    },
+    "13": {
+      "state": "done",
+      "durationMs": 28156
+    },
+    "14": {
+      "state": "done",
+      "durationMs": 793596
+    },
+    "15": {
+      "state": "done",
+      "durationMs": 45897
+    }
+  },
+  "budget": {
+    "startedWith": 12.395333130000001,
+    "lastSeen": 12.382507124
+  }
+}

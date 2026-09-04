@@ -1,0 +1,22 @@
+node_modules/
+.env
+.vercel/
+logs/*.log
+reports/*.md
+dist/
+.DS_Store
+Icon?
+.vercel
+.env*
+
+# The client's own export. They sent it; it does not go back out in a repo,
+# and nothing here modifies it — `pnpm verify:source` proves that against the
+# raw rows it was loaded from.
+front-desk-assignment/
+
+# Scratch analysis from reading the data. ~40 throwaway scripts; the findings
+# that mattered are written up in NOTES.md.
+eda/
+reports/
+.design/
+.agents/

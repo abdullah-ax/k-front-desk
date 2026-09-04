@@ -123,6 +123,15 @@ const KEYTERMS = ["Hollow","Ridge","Mangrove","Landing","Pointe","Shores","Cay",
 const assistant = {
     name: "Gulf Breeze Air — front desk",
     firstMessage: FIRST_MESSAGE,
+    // OFF, not the default. Vapi plays an office ambience under the agent unless
+    // you say otherwise, and a caller hears it as a room full of people talking
+    // over the person they are speaking to. There is no office; pretending
+    // there is one costs clarity on a line that is already compressed.
+    backgroundSound: "off",
+    // Vapi's own denoiser on the CALLER's audio. Deepgram Flux is doing the
+    // hearing and it is better on a clean signal — a caller standing next to
+    // the unit they are complaining about is the normal case, not the edge one.
+    backgroundDenoisingEnabled: true,
     model: {
       // The SAME model and temperature every gate is measured against.
       //
